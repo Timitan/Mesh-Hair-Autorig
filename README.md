@@ -103,6 +103,7 @@ Within the Hair Autorig main panel, there are utilities for managing bones
 This addon has a few notes regarding its usage.
 * Bones with multiple children will not work with this addon
 * There can only be one master chain within a bone group
-* When snapping FK to IK with master and child strands, the master strand must be snapped first, then the slave strands
+* When snapping FK to IK or from IK to FK with master and child strands, the master strand must be snapped first, then the slave strands
 * All properties are disabled by default for slave strands
+* The transforms of snap bones needs to be reset when using snapping functions
 
