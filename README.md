@@ -11,7 +11,7 @@
 ## General Info
 Mesh Hair Autorig is a Blender addon intended for rigging mesh-based strands of hair. All it needs is a chain of bones and it will create FK, IK and Tweak bones off of it.
 
-This addon could also be used for rigging tentacles, ropes, etc but its features are mostly tailored towards hair.  
+This addon could also be used for rigging tentacles, ropes, etc but its features are mostly tailored for rigging hair.  
 
 ## Features
 List of features:
