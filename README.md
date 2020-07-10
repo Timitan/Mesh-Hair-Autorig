@@ -11,7 +11,7 @@
 ## General Info
 Mesh Hair Autorig is a Blender addon intended for rigging mesh-based strands of hair. All it needs is a chain of bones and it will create FK, IK and Tweak bones off of it.
 
-This addon could also be used for rigging any sorts of other appendages however, some features are intended for rigging mesh hair.  
+This addon could also be used for rigging tentacles, ropes, etc but its features are mostly tailored towards hair.  
 
 ## Features
 List of features:
@@ -20,7 +20,7 @@ List of features:
 - FK/ IK snap functions
 - Utility functions for managing, keyframing and hiding bones
 - Custom bone objects organized into collections
-- Master and slave bone chains
+- Master and child chains
 
 ## Usage
 
@@ -35,8 +35,8 @@ In addition to the FK, IK and Tweak bones, there are snap bones and a root bone.
   - Created at the armature's origin point
   - If there is a Root parent specified, the bone will be created at that bone's location instead
  
-### Master and Slave chains
-There are also master and slave bone chains where the slave bone chains will copy the transforms of the master bone chain. This is used to simplify the animation of multiple bone chains with the usage of one bone chain. Slave chains have properties that influence copying master strand bone transforms however.
+### Master and Child chains
+There are also master and child bone chains where the child bone chains will copy the transforms of the master bone chain. This is used to simplify the animation of multiple bone chains with the usage of one bone chain. child chains have properties that influence copying master strand bone transforms however.
 
 ### Root parents
 Root parents and alternative root parents can be specified when creating the bones and constraints of the armature. These bones are optional and do not need to be specified when creating bones.
@@ -56,7 +56,7 @@ These bones will have properties that can be viewed under the Hair Autorig panel
   - Controls if the selected bone will double rotations from its parent
   
 * Chain Rot
-  - Controls the influence of master bone chain transforms on slave bone chains
+  - Controls the influence of master bone chain transforms on child bone chains
 
 * FK/ IK Anchor
   - Controls the influence of the parent's transforms of the selected bone
@@ -78,7 +78,7 @@ Within the Hair Autorig main panel, there are utilities for managing bones
   - Keyframe the specified property for all selected bones on the current keyframe
 * Isolate bones
   - Hides all other bones that are not part of the selected chain of bones
-  - Will exclude hiding master or slave chains if they are used
+  - Will exclude hiding master or child chains if they are used
 
 ## Setup
 
@@ -87,7 +87,7 @@ Within the Hair Autorig main panel, there are utilities for managing bones
 2. Go into Edit mode and under The Hair Autorig Main panel in the properties panel, click "Create Bones"
 3. Go into Pose Mode and click "Create Constraints"
 
-### With Master and Slave bone chains:
+### With Master and Child bone chains:
 1. Create two bone chains
 2. At the last bone of one of the chains, prepend a "m_" to its name to label it as a master chain
 3. Put both bone chains into a bone group
@@ -103,7 +103,7 @@ Within the Hair Autorig main panel, there are utilities for managing bones
 This addon has a few notes regarding its usage.
 * Bones with multiple children will not work with this addon
 * There can only be one master chain within a bone group
-* When snapping FK to IK or from IK to FK with master and child strands, the master strand must be snapped first, then the slave strands
-* All properties are disabled by default for slave strands
+* When snapping FK to IK or from IK to FK with master and child strands, the master strand must be snapped first, then child strands
+* All properties are disabled by default for child strands
 * The transforms of snap bones needs to be reset when using snapping functions
 
